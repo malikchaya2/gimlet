@@ -271,6 +271,7 @@ func (u *userMiddleware) getUserForOIDCHeader(ctx context.Context, header string
 	// ignore it if it's the unauthorized user.
 	if strings.HasPrefix(token.Subject, spiffeRoute) {
 		if strings.HasSuffix(token.Subject, unauthorizedSpifeServiceUser) {
+			grip.Infof("chayaMtesting ignoring spiffe user %s", token.Subject)
 			return nil, nil
 		}
 	}
