@@ -1,4 +1,4 @@
-module github.com/evergreen-ci/gimlet
+module github.com/malikchaya2/gimlet
 
 go 1.16
 
