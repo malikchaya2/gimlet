@@ -252,7 +252,7 @@ func (u *userMiddleware) ServeHTTP(rw http.ResponseWriter, r *http.Request, next
 	next(rw, r)
 }
 
-const unauthorizedSpifeServiceUser = "Istio-Ingressgateway-Public-Service-Account"
+const unauthorizedSpifeServiceUser = "istio-ingressgateway-public-service-account"
 const spiffeRoute = "spiffe://cluster.local/ns/routing"
 
 func (u *userMiddleware) getUserForOIDCHeader(ctx context.Context, header string) (User, error) {
